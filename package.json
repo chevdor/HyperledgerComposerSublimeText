@@ -1,7 +1,7 @@
 {
     "schema_version": "3.0",
     "packages": [{
-        "name": "Hyperledger Composer Snippets",
+        "name": "Hyperledger Composer",
         "details": "https://github.com/chevdor/HyperledgerComposerSnippets",
         "labels": ["hyperledger", "composer", "sublime", "snippets", "blockchain"],
         "releases": [{

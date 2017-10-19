@@ -1,5 +1,7 @@
-= HyperledgerComposerSnippets
+= Hyperledger Composer Sublime Package
 
-A set of SublimeText syntax, theme, snippets for the Hyperledger Composer.
+A set of SublimeText syntax, theme and snippets for Hyperledger Composer.
 
 Use +Control Package+ to install.
+
+image:doc/ss01.png[]
