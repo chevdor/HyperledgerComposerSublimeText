@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+transaction ${1:transactionName} {
+  o ${3:fieldType} ${2:fieldId}
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>transaction</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.hl-composer-model</scope>
+</snippet>
