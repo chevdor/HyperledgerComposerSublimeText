@@ -1,44 +1,54 @@
 %YAML 1.2
 ---
-# See http://www.sublimetext.com/docs/3/syntax.html
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Hyperledger Composer
 file_extensions:
   - cto
-name: Hyperledger Composer Model
 scope: source.hl-composer-model
 contexts:
   main:
-    # Strings begin and end with quotes, and use backslashes as an escape
-    # character
-    - match: '"'
-      scope: punctuation.definition.string.begin.hl-composer-model
-      push: double_quoted_string
-
-    # Comments begin with a '//' and finish at the end of the line
-    - match: '//'
-      scope: punctuation.definition.comment.hl-composer-model
-      push: line_comment
-
-    # Keywords are if, else for and while.
-    # Note that blackslashes don't need to be escaped within single quoted
-    # strings in YAML. When using single quoted strings, only single quotes
-    # need to be escaped: this is done by using two single quotes next to each
-    # other.
-    - match: '\b(if|else|for|while)\b'
-      scope: keyword.control.hl-composer-model
-
-    # Numbers
-    - match: '\b(-)?[0-9.]+\b'
-      scope: constant.numeric.hl-composer-model
-
-  double_quoted_string:
-    - meta_scope: string.quoted.double.hl-composer-model
-    - match: '\\.'
-      scope: constant.character.escape.hl-composer-model
-    - match: '"'
-      scope: punctuation.definition.string.end.hl-composer-model
-      pop: true
-
-  line_comment:
-    - meta_scope: comment.line.hl-composer-model
-    - match: $
-      pop: true
+    - match: (\/\*)
+      comment: Multiline comments
+      push:
+        - meta_scope: comment
+        - match: (\*\/)
+          pop: true
+    - match: \/\/.*
+      comment: Comments
+      scope: comment
+    - match: '\b(\s+(?:identified by))?\s+([A-Za-z_]\w*)\b'
+      comment: Mapping definition
+      captures:
+        1: constant.language
+        2: constant.language
+        3: constant.language
+        4: keyword.control
+    - match: '\b(tbd)\s+([A-Za-z_]\w*)\b'
+      comment: Events
+      scope: keyword.control
+      captures:
+        2: support.function
+    - match: '\b(abstract|asset|event|enum|participant|transaction|concept)\s+([A-Za-z_]\w*)(?:\s+is\s+((?:[A-Za-z_][\,\s]*)*))?\b'
+      comment: Main keywords
+      scope: keyword.control
+      captures:
+        2: entity.name.function
+        3: entity.name.function
+    - match: \b(String|Double|Integer|DateTime|)?
+      comment: Built-in types
+      captures:
+        1: constant.language
+        2: variable.parameter
+    - match: \b(namespace|\_)\b
+      comment: Langauge keywords
+      scope: keyword.control
+    - match: (o|--\>)
+      comment: Operators
+      scope: keyword.control
+    - match: '\b([A-Za-z_]\w*)\s*\('
+      comment: Function call
+      captures:
+        1: support.type
+    - match: '([\"\''].*?[\"\''])'
+      comment: Strings
+      scope: string.quoted

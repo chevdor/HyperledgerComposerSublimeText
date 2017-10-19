@@ -28,37 +28,48 @@
 			<key>name</key>
 			<string>comment</string>
 		</dict>
-		
 		<dict>
 			<key>captures</key>
 			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language</string>
+				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>support.event</string>
+					<string>constant.language</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control</string>
 				</dict>
 			</dict>
 			<key>comment</key>
-			<string>Events</string>
+			<string>Mapping definition</string>
 			<key>match</key>
-			<string>\b(event)\s+([A-Za-z_]\w*)\b</string>
-			<key>name</key>
-			<string>keyword.control</string>
+			<string>\b(\s+(?:identified by))?\s+([A-Za-z_]\w*)\b</string>
 		</dict>
-		
 		<dict>
 			<key>captures</key>
 			<dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>support.enum</string>
+					<string>support.function</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>Events</string>
 			<key>match</key>
-			<string>\b(enum)\s+([A-Za-z_]\w*)\b</string>
+			<string>\b(tbd)\s+([A-Za-z_]\w*)\b</string>
 			<key>name</key>
 			<string>keyword.control</string>
 		</dict>
@@ -79,7 +90,7 @@
 			<key>comment</key>
 			<string>Main keywords</string>
 			<key>match</key>
-			<string>\b(asset|participant|transaction|abstract|concept|)\s+([A-Za-z_]\w*)(?:\s+is\s+((?:[A-Za-z_][\,\s]*)*))?\b</string>
+			<string>\b(abstract|asset|event|enum|participant|transaction|concept)\s+([A-Za-z_]\w*)(?:\s+is\s+((?:[A-Za-z_][\,\s]*)*))?\b</string>
 			<key>name</key>
 			<string>keyword.control</string>
 		</dict>
@@ -104,44 +115,18 @@
 		</dict>
 		<dict>
 			<key>comment</key>
-			<string>True and false keywords</string>
-			<key>match</key>
-			<string>\b(true|false)\b</string>
-			<key>name</key>
-			<string>constant.language</string>
-		</dict>
-		<dict>
-			<key>comment</key>
 			<string>Langauge keywords</string>
 			<key>match</key>
-			<string>\b(var|import|function|constant|if|else|for|while|do|break|continue|returns?|private|public||inherited|this|namespace|\_)\b</string>
+			<string>\b(namespace|\_)\b</string>
 			<key>name</key>
 			<string>keyword.control</string>
 		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>constant.language</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.control</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>Variable definitions</string>
-			<key>match</key>
-			<string>\b([A-Za-z_]\w+)(\s+(?:private|public|internal|external|inherited))?\s+([A-Za-z_]\w*)\;</string>
-		</dict>
+	
 		<dict>
 			<key>comment</key>
 			<string>Operators</string>
 			<key>match</key>
-			<string>(=|!|&gt;|&lt;|\||&amp;|\?|:|\^|~|\*|\+|-|\/|\%)</string>
+			<string>(o|--\>)</string>
 			<key>name</key>
 			<string>keyword.control</string>
 		</dict>
@@ -167,22 +152,7 @@
 			<key>name</key>
 			<string>string.quoted</string>
 		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Numbers</string>
-			<key>match</key>
-			<string>\b(\d+)\b</string>
-			<key>name</key>
-			<string>constant.numeric</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-			<string>Hexadecimal</string>
-			<key>match</key>
-			<string>\b(0[xX][a-fA-F0-9]+)\b</string>
-			<key>name</key>
-			<string>constant.numeric</string>
-		</dict>
+	
 	</array>
 	<key>scopeName</key>
 	<string>source.hl-composer-model</string>
