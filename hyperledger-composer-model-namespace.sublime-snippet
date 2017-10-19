@@ -1,7 +1,7 @@
 
 <snippet>
 	<content><![CDATA[
-namespace {$1:org}.{$2:acme}.{$3:bond}
+namespace ${1:org}.${2:acme}.${3:bond}
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

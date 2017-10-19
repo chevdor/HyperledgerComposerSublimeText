@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 transaction ${1:transactionName} {
-  o ${3:fieldType} ${2:fieldId}
+  o ${3:String} ${2:field}
 }
 
 ]]></content>

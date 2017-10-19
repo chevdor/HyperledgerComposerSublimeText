@@ -1,12 +1,12 @@
 <snippet>
 	<content><![CDATA[
-participant ${1:participantName} identified by ${2:participantId} {
-  o ${3:String} ${2:participantId}
+event ${1:eventName} {
+  o ${2:String} ${3:name}
 }
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>participant</tabTrigger>
+	<tabTrigger>event</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.hl-composer-model</scope>
 </snippet>
