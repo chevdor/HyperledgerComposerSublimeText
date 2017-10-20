@@ -1,0 +1,29 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Hyperledger Composer Query
+file_extensions:
+  - qry
+scope: source.hl-composer-query
+contexts:
+  main:
+    - match: \b(description\:|statement\:)?
+      comment: Built-in types
+      captures:
+        1: constant.language
+        2: variable.parameter
+    - match: (\/\*)
+      comment: Multiline comments
+      push:
+        - meta_scope: comment
+        - match: (\*\/)
+          pop: true
+    - match: \/\/.*
+      comment: Comments
+      scope: comment
+    - match: '\b(query)\s+([A-Za-z_]\w*)(?:\s+is\s+((?:[A-Za-z_][\,\s]*)*))?\b'
+      comment: Main keywords
+      scope: keyword.control
+      captures:
+        2: entity.name.function
+        3: entity.name.function

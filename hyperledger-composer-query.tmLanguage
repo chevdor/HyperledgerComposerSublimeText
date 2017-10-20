@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>fileTypes</key>
+        <array>
+            <string>qry</string>
+        </array>
+        <key>name</key>
+        <string>Hyperledger Composer Query</string>
+        <key>patterns</key>
+        <array>
+        	<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>Built-in types</string>
+			<key>match</key>
+			<string>\b(description\:|statement\:)?</string>
+		</dict>
+            <dict>
+                <key>begin</key>
+                <string>(\/\*)</string>
+                <key>comment</key>
+                <string>Multiline comments</string>
+                <key>end</key>
+                <string>(\*\/)</string>
+                <key>name</key>
+                <string>comment</string>
+            </dict>
+            <dict>
+                <key>comment</key>
+                <string>Comments</string>
+                <key>match</key>
+                <string>\/\/.*</string>
+                <key>name</key>
+                <string>comment</string>
+            </dict>
+            <dict>
+                <key>captures</key>
+                <dict>
+                    <key>2</key>
+                    <dict>
+                        <key>name</key>
+                        <string>entity.name.function</string>
+                    </dict>
+                    <key>3</key>
+                    <dict>
+                        <key>name</key>
+                        <string>entity.name.function</string>
+                    </dict>
+                </dict>
+                <key>comment</key>
+                <string>Main keywords</string>
+                <key>match</key>
+                <string>\b(query)\s+([A-Za-z_]\w*)(?:\s+is\s+((?:[A-Za-z_][\,\s]*)*))?\b</string>
+                <key>name</key>
+                <string>keyword.control</string>
+            </dict>
+        </array>
+        <key>scopeName</key>
+        <string>source.hl-composer-query</string>
+        <key>uuid</key>
+        <string>4bca5b0a-582f-4db5-88ad-dd4b9a2a5462</string>
+    </dict>
+</plist>

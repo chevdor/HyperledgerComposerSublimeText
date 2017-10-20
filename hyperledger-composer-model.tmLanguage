@@ -7,7 +7,7 @@
 		<string>cto</string>
 	</array>
 	<key>name</key>
-	<string>Hyperledger Composer</string>
+	<string>Hyperledger Composer Model</string>
 	<key>patterns</key>
 	<array>
 		<dict>
