@@ -3,7 +3,8 @@
 query ${1:queryName} {
   description: "${2:queryDescription}"
   statement:
-      ${3:SELECT org.acme.mynetwork.Commodity}
+      ${3:SELECT org.acme.mynetwork.Commodity
+      	WHERE (quantity > 42)}
 }
 
 ]]></content>
