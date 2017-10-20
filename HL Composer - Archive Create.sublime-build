@@ -1,0 +1,3 @@
+{
+	"shell_cmd": "composer archive create --sourceType dir --sourceName \"$project_path\""
+}
