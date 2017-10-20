@@ -1,7 +1,20 @@
 = Hyperledger Composer Sublime Package
 
-A set of SublimeText syntax, theme and snippets for Hyperledger Composer.
+A set of SublimeText:
+
+* syntax
+* language definition
+* snippets
+* build
+
+To make from SublimeText a cosy Hyperledger Composer home.
 
 Use +Control Package+ to install.
 
-image:doc/ss01.png[]
+== Models
+
+image:doc/ss01.png[width=90%]
+
+== Queries
+
+image:doc/ss02.png[width=90%]
