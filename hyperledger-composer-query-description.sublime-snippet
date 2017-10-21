@@ -1,12 +1,10 @@
 <snippet>
 	<content><![CDATA[
-query ${1:queryName} {
-	${2}
-}
+description: "${1:This is your awesome description}"
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>query</tabTrigger>
+	<tabTrigger>description</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.hl-composer-query</scope>
 </snippet>
