@@ -7,11 +7,15 @@ file_extensions:
 scope: source.hl-composer-acl
 contexts:
   main:
-    - match: '\b(participant(\([A-Za-z]+\))?\:|resource(\([A-Za-z]+\))?\:|description()?\:|operation()?\:|action()?\:|condition()?\:)?'
+    - match: '\b(description|participant(\([A-Za-z]+\))?|transaction(\([A-Za-z]+\))?|operation|resource(\([A-Za-z]+\))?|action|condition)?\:'
       comment: Built-in types
       captures:
         1: constant.language
         2: variable.parameter
+        3: variable.parameter
+    - match: (CREATE|ALLOW|DENY|READ|ALL|UPDATE|DELETE|)
+      comment: Strings
+      scope: support.function
     - match: (\/\*)
       comment: Multiline comments
       push:
@@ -21,6 +25,12 @@ contexts:
     - match: \/\/.*
       comment: Comments
       scope: comment
+    - match: '([\"\''].*?[\"\''])'
+      comment: Strings
+      scope: string.quoted
+    - match: \b(\d+)\b
+      comment: Numbers
+      scope: constant.numeric
     - match: '\b(rule)\s+([A-Za-z_]\w*)(?:\s+is\s+((?:[A-Za-z_][\,\s]*)*))?\b'
       comment: Main keywords
       scope: keyword.control

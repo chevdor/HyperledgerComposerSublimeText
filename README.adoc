@@ -23,6 +23,8 @@ image:doc/ss02.png[width=90%]
 
 == ACL
 
+image:doc/ss03.png[width=90%]
+
 source: https://hyperledger.github.io/composer/reference/acl_language.html
 
 == Transactions Processor Functions

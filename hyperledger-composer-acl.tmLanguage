@@ -23,11 +23,24 @@
                         <key>name</key>
                         <string>variable.parameter</string>
                     </dict>
+                    <key>3</key>
+                    <dict>
+                        <key>name</key>
+                        <string>variable.parameter</string>
+                    </dict>
                 </dict>
                 <key>comment</key>
                 <string>Built-in types</string>
                 <key>match</key>
-                <string>\b(description()?\:|participant(\([A-Za-z]+\))?\:|operation()?\:|resource(\([A-Za-z]+\))?\:|action()?\:|condition()?\:)?</string>
+                <string>\b(description|participant(\([A-Za-z]+\))?|transaction(\([A-Za-z]+\))?|operation|resource(\([A-Za-z]+\))?|action|condition)?\:</string>
+            </dict>
+            <dict>
+                <key>comment</key>
+                <string>Strings</string>
+                <key>match</key>
+                <string>(CREATE|ALLOW|DENY|READ|ALL|UPDATE|DELETE|)</string>
+                <key>name</key>
+                <string>support.function</string>
             </dict>
             <dict>
                 <key>begin</key>
@@ -46,6 +59,22 @@
                 <string>\/\/.*</string>
                 <key>name</key>
                 <string>comment</string>
+            </dict>
+            <dict>
+                <key>comment</key>
+                <string>Strings</string>
+                <key>match</key>
+                <string>([\"\'].*?[\"\'])</string>
+                <key>name</key>
+                <string>string.quoted</string>
+            </dict>
+            <dict>
+                <key>comment</key>
+                <string>Numbers</string>
+                <key>match</key>
+                <string>\b(\d+)\b</string>
+                <key>name</key>
+                <string>constant.numeric</string>
             </dict>
             <dict>
                 <key>captures</key>
