@@ -1,7 +1,12 @@
 <snippet>
 	<content><![CDATA[
-rule ${1:EverybodyCanReadEverything} {
-    ${2}
+rule ${1:RuleName} {
+	description: "${2:Allow all participants read access to all resources}"
+	participant: "${3:org.acme.sample.SampleParticipant}"
+	operation: ${4:READ}
+	resource: "${5:org.acme.sample.*}"
+	action: ${6:ALLOW}
+	${7}
 }
 
 ]]></content>

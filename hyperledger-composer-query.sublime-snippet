@@ -1,7 +1,11 @@
 <snippet>
 	<content><![CDATA[
 query ${1:queryName} {
-	${2}
+	description: "${2:queryDescription}"
+	statement:
+		SELECT ${3:org.acme.mynetwork.Commodity
+			WHERE ${4:(quantity > 42)}
+	${5}
 }
 
 ]]></content>
