@@ -34,7 +34,7 @@ contexts:
         1: keyword.control
         2: keyword.control
         3: entity.name.function
-        4: entity.name.function
+        4: keyword.control
         5: support.value
     - match: '\b(event|transaction|concept)?\s+([A-Za-z_]+)?'
       comment: Main keywords

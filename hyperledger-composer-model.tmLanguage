@@ -94,7 +94,7 @@
                     <key>4</key>
                     <dict>
                         <key>name</key>
-                        <string>entity.name.function</string>
+                        <string>keyword.control</string>
                     </dict>
                     <key>5</key>
                     <dict>
