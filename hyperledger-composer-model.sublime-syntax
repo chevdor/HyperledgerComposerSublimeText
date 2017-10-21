@@ -31,22 +31,22 @@ contexts:
     - match: '\b(abstract)?\s?(asset|enum|participant)?\s+([A-Za-z_]+)?\s+(identified by)?\s+([a-zA-Z_\-\d]+)?'
       comment: Main keywords
       captures:
-        1: entity.name.function
-        2: entity.name.function
-        3: support.function
+        1: keyword.control
+        2: keyword.control
+        3: entity.name.function
         4: entity.name.function
         5: support.value
     - match: '\b(event|transaction|concept)?\s+([A-Za-z_]+)?'
       comment: Main keywords
       captures:
-        1: entity.name.function
-        2: support.function
+        1: keyword.control
+        2: entity.name.function
     - match: '\b(namespace)?\s+([A-Za-z_\.]*)?\b'
       comment: Main keywords
       scope: support.function
       captures:
-        1: entity.name.function
-        2: support.variable
+        1: keyword.control
+        2: entity.name.function
     - match: '(o|--\>)\s+([a-zA-Z_\-\d]+|String|String\[\]|Double\[\]|Long\[\]|Integer\[\]|DateTime\[\]|Boolean\[\])?\s([a-zA-Z]+)?'
       comment: Built-in types
       captures:

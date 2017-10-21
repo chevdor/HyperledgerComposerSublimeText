@@ -79,17 +79,17 @@
                 	<key>1</key>
                     <dict>
                         <key>name</key>
-                        <string>entity.name.function</string>
+                        <string>keyword.control</string>
                     </dict>
                 	<key>2</key>
                     <dict>
                         <key>name</key>
-                        <string>entity.name.function</string>
+                        <string>keyword.control</string>
                     </dict>
                     <key>3</key>
                     <dict>
                         <key>name</key>
-                        <string>support.function</string>
+                        <string>entity.name.function</string>
                     </dict>
                     <key>4</key>
                     <dict>
@@ -113,12 +113,12 @@
                 	<key>1</key>
                     <dict>
                         <key>name</key>
-                        <string>entity.name.function</string>
+                        <string>keyword.control</string>
                     </dict>
                     <key>2</key>
                     <dict>
                         <key>name</key>
-                        <string>support.function</string>
+                        <string>entity.name.function</string>
                     </dict>
                 </dict>
                 <key>comment</key>
@@ -132,12 +132,12 @@
                     <key>1</key>
                     <dict>
                         <key>name</key>
-                        <string>entity.name.function</string>
+                        <string>keyword.control</string>
                     </dict>
                     <key>2</key>
                     <dict>
                         <key>name</key>
-                        <string>support.variable</string>
+                        <string>entity.name.function</string>
                     </dict>
                 </dict>
                 <key>comment</key>
