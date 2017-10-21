@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+rule ${1:EverybodyCanReadEverything} {
+    description: "${2:Allow all participants read access to all resources}"
+    participant: "${3:org.acme.sample.SampleParticipant}"
+    operation: ${4:READ}
+    resource: "${5:org.acme.sample.*}"
+    action: ${6:ALLOW}
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>rule</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.hl-composer-acl</scope>
+</snippet>

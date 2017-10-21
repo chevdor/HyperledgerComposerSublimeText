@@ -1,0 +1,29 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Hyperledger Composer ACL
+file_extensions:
+  - acl
+scope: source.hl-composer-acl
+contexts:
+  main:
+    - match: '\b(participant(\([A-Za-z]+\))?\:|resource(\([A-Za-z]+\))?\:|description()?\:|operation()?\:|action()?\:|condition()?\:)?'
+      comment: Built-in types
+      captures:
+        1: constant.language
+        2: variable.parameter
+    - match: (\/\*)
+      comment: Multiline comments
+      push:
+        - meta_scope: comment
+        - match: (\*\/)
+          pop: true
+    - match: \/\/.*
+      comment: Comments
+      scope: comment
+    - match: '\b(rule)\s+([A-Za-z_]\w*)(?:\s+is\s+((?:[A-Za-z_][\,\s]*)*))?\b'
+      comment: Main keywords
+      scope: keyword.control
+      captures:
+        2: entity.name.function
+        3: entity.name.function

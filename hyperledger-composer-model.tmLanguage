@@ -111,7 +111,7 @@
 			<key>comment</key>
 			<string>Built-in types</string>
 			<key>match</key>
-			<string>\b(String|Double|Integer|DateTime|)?</string>
+			<string>\b(String|Double|Long|Integer|DateTime|Boolean)?</string>
 		</dict>
 		<dict>
 			<key>comment</key>

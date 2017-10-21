@@ -15,6 +15,18 @@ Use +Control Package+ to install.
 
 image:doc/ss01.png[width=90%]
 
+Source: https://hyperledger.github.io/composer/reference/cto_language.html
+
 == Queries
 
 image:doc/ss02.png[width=90%]
+
+== ACL
+
+source: https://hyperledger.github.io/composer/reference/acl_language.html
+
+== Transactions Processor Functions
+
+NOTE: Those are not Implemented yet
+
+source: https://hyperledger.github.io/composer/reference/js_scripts.html
