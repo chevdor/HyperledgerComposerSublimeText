@@ -1,12 +1,10 @@
 <snippet>
 	<content><![CDATA[
-rule ${1:EverybodyCanReadEverything} {
-    ${2}
-}
+action: ${1:ALLOW}
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>rule</tabTrigger>
+	<tabTrigger>action</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.hl-composer-acl</scope>
 </snippet>

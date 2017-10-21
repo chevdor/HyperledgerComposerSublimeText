@@ -7,7 +7,7 @@ file_extensions:
 scope: source.hl-composer-acl
 contexts:
   main:
-    - match: '\b(description|participant(\([A-Za-z]+\))?|transaction(\([A-Za-z]+\))?|operation|resource(\([A-Za-z]+\))?|action|condition)?\:'
+    - match: '\b(description|participant(\([A-Za-z0-9\-_]+\))?|transaction(\([A-Za-z0-9\-_]+\))?|operation|resource(\([A-Za-z0-9\-_]+\))?|action|condition)?\:'
       comment: Built-in types
       captures:
         1: constant.language

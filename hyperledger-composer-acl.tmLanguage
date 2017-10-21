@@ -32,7 +32,7 @@
                 <key>comment</key>
                 <string>Built-in types</string>
                 <key>match</key>
-                <string>\b(description|participant(\([A-Za-z]+\))?|transaction(\([A-Za-z]+\))?|operation|resource(\([A-Za-z]+\))?|action|condition)?\:</string>
+                <string>\b(description|participant(\([A-Za-z0-9\-_]+\))?|transaction(\([A-Za-z0-9\-_]+\))?|operation|resource(\([A-Za-z0-9\-_]+\))?|action|condition)?\:</string>
             </dict>
             <dict>
                 <key>comment</key>

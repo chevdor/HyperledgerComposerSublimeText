@@ -1,12 +1,10 @@
 <snippet>
 	<content><![CDATA[
-rule ${1:EverybodyCanReadEverything} {
-    ${2}
-}
+participant(${1:p}): "${2:org.acme.sample.SampleParticipant}"
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>rule</tabTrigger>
+	<tabTrigger>participant</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.hl-composer-acl</scope>
 </snippet>
