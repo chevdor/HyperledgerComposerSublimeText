@@ -12,6 +12,12 @@ contexts:
       captures:
         1: constant.language
         2: variable.parameter
+    - match: (=|!|>|<|\||&|\?|:|\^|~|\*|\+|-|\/|\%)
+      comment: Operators
+      scope: keyword.control
+    - match: '([\"\''].*?[\"\''])'
+      comment: Strings
+      scope: string.quoted
     - match: (\/\*)
       comment: Multiline comments
       push:

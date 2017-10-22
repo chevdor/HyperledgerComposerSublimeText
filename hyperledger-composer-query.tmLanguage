@@ -10,25 +10,41 @@
         <string>Hyperledger Composer Query</string>
         <key>patterns</key>
         <array>
-        	<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>constant.language</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>variable.parameter</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>Built-in types</string>
-			<key>match</key>
-			<string>\b(description\:|statement\:)?</string>
-		</dict>
+            <dict>
+                <key>captures</key>
+                <dict>
+                    <key>1</key>
+                    <dict>
+                        <key>name</key>
+                        <string>constant.language</string>
+                    </dict>
+                    <key>2</key>
+                    <dict>
+                        <key>name</key>
+                        <string>variable.parameter</string>
+                    </dict>
+                </dict>
+                <key>comment</key>
+                <string>Built-in types</string>
+                <key>match</key>
+                <string>\b(description\:|statement\:)?</string>
+            </dict>
+            <dict>
+                <key>comment</key>
+                <string>Operators</string>
+                <key>match</key>
+                <string>(=|!|&gt;|&lt;|\||&amp;|\?|:|\^|~|\*|\+|-|\/|\%)</string>
+                <key>name</key>
+                <string>keyword.control</string>
+            </dict>
+            <dict>
+                <key>comment</key>
+                <string>Strings</string>
+                <key>match</key>
+                <string>([\"\'].*?[\"\'])</string>
+                <key>name</key>
+                <string>string.quoted</string>
+            </dict>
             <dict>
                 <key>begin</key>
                 <string>(\/\*)</string>

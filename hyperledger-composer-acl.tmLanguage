@@ -32,7 +32,7 @@
                 <key>comment</key>
                 <string>Built-in types</string>
                 <key>match</key>
-                <string>\b(description|participant(\([A-Za-z0-9\-_]+\))?|transaction(\([A-Za-z0-9\-_]+\))?|operation|resource(\([A-Za-z0-9\-_]+\))?|action|condition)?\:</string>
+                <string>\b(participant(\([A-Za-z0-9\-_]+\))?|resource(\([A-Za-z0-9\-_]+\))?|transaction(\([A-Za-z0-9\-_]+\))?|operation(\([A-Za-z0-9\-_]+}\))?|action(\([A-Za-z0-9\-_]+\))?|description|condition(\([A-Za-z0-9\-_]+\))?)?\:</string>
             </dict>
             <dict>
                 <key>comment</key>
@@ -41,6 +41,14 @@
                 <string>(CREATE|ALLOW|DENY|READ|ALL|UPDATE|DELETE|)</string>
                 <key>name</key>
                 <string>support.function</string>
+            </dict>
+            <dict>
+                <key>comment</key>
+                <string>Operators</string>
+                <key>match</key>
+                <string>(===|\%)</string>
+                <key>name</key>
+                <string>keyword.control</string>
             </dict>
             <dict>
                 <key>begin</key>

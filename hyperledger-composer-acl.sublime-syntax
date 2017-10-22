@@ -7,7 +7,7 @@ file_extensions:
 scope: source.hl-composer-acl
 contexts:
   main:
-    - match: '\b(description|participant(\([A-Za-z0-9\-_]+\))?|transaction(\([A-Za-z0-9\-_]+\))?|operation|resource(\([A-Za-z0-9\-_]+\))?|action|condition)?\:'
+    - match: '\b(participant(\([A-Za-z0-9\-_]+\))?|resource(\([A-Za-z0-9\-_]+\))?|transaction(\([A-Za-z0-9\-_]+\))?|operation(\([A-Za-z0-9\-_]+}\))?|action(\([A-Za-z0-9\-_]+\))?|description|condition(\([A-Za-z0-9\-_]+\))?)?\:'
       comment: Built-in types
       captures:
         1: constant.language
@@ -16,6 +16,9 @@ contexts:
     - match: (CREATE|ALLOW|DENY|READ|ALL|UPDATE|DELETE|)
       comment: Strings
       scope: support.function
+    - match: (===|\%)
+      comment: Operators
+      scope: keyword.control
     - match: (\/\*)
       comment: Multiline comments
       push:
