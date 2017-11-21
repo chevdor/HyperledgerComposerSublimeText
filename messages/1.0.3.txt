@@ -1,4 +1,4 @@
-Version 1.0.2
+Version 1.0.3
 
  Your Hyperledger Composer package has been updated. You can see all versions and descriptions at https://github.com/chevdor/HyperledgerComposerSublimeText/releases
 

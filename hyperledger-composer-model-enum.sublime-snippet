@@ -1,8 +1,9 @@
 <snippet>
 	<content><![CDATA[
 enum ${1:enumName} {
-  o ${2:val1}
-  o ${3:val2}
+	o ${2:val1}
+	o ${3:val2}
+	${4}
 }
 
 ]]></content>

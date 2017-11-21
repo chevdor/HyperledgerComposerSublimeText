@@ -2,6 +2,7 @@
 	<content><![CDATA[
 concept ${1:conceptName} {
     o ${2:String} ${3:instrumentId} 
+    ${4}
 }
 
 ]]></content>

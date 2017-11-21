@@ -1,7 +1,8 @@
 <snippet>
 	<content><![CDATA[
-abstract participant ${1:participantName} identified by ${2:participantId} {
-  o ${3:participantType} ${2:participantId}
+abstract transaction ${1:transactionName} {
+	o ${2:String} ${3:field}
+	${4}
 }
 
 ]]></content>

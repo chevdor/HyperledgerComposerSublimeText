@@ -1,7 +1,8 @@
 <snippet>
 	<content><![CDATA[
 asset ${1:assetName} identified by ${2:assetId} {
-  o ${3:assetType} ${2:assetId}
+	o String ${2:assetId}
+	${3}
 }
 
 ]]></content>

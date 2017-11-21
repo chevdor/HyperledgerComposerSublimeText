@@ -5,7 +5,7 @@ Version 1.0.0
 
 Welcome 
 
-  Welcome to the Hyperledger Composer package for SublimeText
+  Welcome to the Hyperledger Composer package for SublimeText. This package is brought to you by chevdor.
 
 Source
 
