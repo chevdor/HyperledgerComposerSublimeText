@@ -2,11 +2,13 @@
 	<content><![CDATA[
 rule ${1:RuleName} {
 	description: "${2:Allow all participants read access to all resources}"
-	participant: "${3:org.acme.sample.SampleParticipant}"
-	operation: ${4:READ}
-	resource: "${5:org.acme.sample.*}"
-	action: ${6:ALLOW}
-	${7}
+	participant: "${3:org.acme.sample}${4:.SampleParticipant}"
+	operation: ${5:READ}
+	resource: "${3}${6:.*}"
+	transaction: "${3}${5:.*}"
+	condition: ${6:...}
+	action: ${7:ALLOW}
+	${78}
 }
 
 ]]></content>
