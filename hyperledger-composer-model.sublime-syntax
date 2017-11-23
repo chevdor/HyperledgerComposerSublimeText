@@ -52,6 +52,12 @@ contexts:
       captures:
         1: keyword.control
         2: entity.name.function
+    - match: '\b(import)\s+[\"\''](([A-Za-z_\.])+(\*{0,2}))[\"\'']'
+      comment: Main keywords
+      scope: support.function
+      captures:
+        1: keyword.control
+        2: entity.name.function
     - match: '(o|--\>)\s+([a-zA-Z_\-\d]+|String|String\[\]|Double\[\]|Long\[\]|Integer\[\]|DateTime\[\]|Boolean\[\])?(\[\])?\s+([a-zA-Z]+)?'
       comment: Built-in types
       captures:
