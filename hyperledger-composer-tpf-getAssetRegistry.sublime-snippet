@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+getAssetRegistry('${1:org.acme.sample.SampleAsset}')
+    .then(function (${2:assetRegistry}) {
+        // Update the asset in the asset registry.
+        return ${2}.update(tx.asset);
+    });
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>getAssetRegistry</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>
